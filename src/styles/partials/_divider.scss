@@ -1,0 +1,7 @@
+
+@mixin divider {
+    border-bottom: 1px $Mercury solid;
+    position: absolute;
+    width: 80%;
+    left: 0;
+}

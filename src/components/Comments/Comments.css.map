@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"Comments.css"}
+{"version":3,"sources":["../../styles/partials/_reset.scss","Comments.css","../../styles/partials/_typography.scss"],"names":[],"mappings":"AAAA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;EACA,eAAA;ACCJ;;ACLA;EACI,8BAAA;EACA,uDAAA;ADQJ;ACNA;EACI,2BAAA;EACA,oDAAA;ADQJ;ACNA;EACI,2BAAA;EACA,oDAAA;ADQJ","file":"Comments.css"}
