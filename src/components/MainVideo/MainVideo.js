@@ -12,7 +12,7 @@ function MainVideo (props) {
     return (
         <section className='mainvideo'>
             <div className='videoplayer-wrapper'>
-                <video controls className='videoplayer' poster={currentVideo.image}>
+                <video poster={currentVideo.image} controls className='videoplayer' >
                     Your Browser Does Not Support Video File Type
                 </video>
             </div>
@@ -23,7 +23,9 @@ function MainVideo (props) {
                 <p>By Red Crow</p>
 
                 <img src={views}/>
+                <p>{currentVideo.views}</p>
                 <img src={likes}/>
+                <p>{currentVideo.likes}</p>
             </div>
             <p className='mainvideo__description'> On a gusty day in Southern Utah, a group of 25
                 daring mountain bikers blew the doors off what
