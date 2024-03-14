@@ -20,6 +20,8 @@
 .mainvideo .videoplayer-wrapper {
   position: relative;
   padding-bottom: 56.25%;
+  width: 100%;
+  background-color: #000000;
 }
 .mainvideo .videoplayer-wrapper .videoplayer {
   position: absolute;

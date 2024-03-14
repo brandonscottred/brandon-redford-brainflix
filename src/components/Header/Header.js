@@ -10,7 +10,7 @@ function Header() {
         <img className='navbar__logo' src={logo} alt="brainflix-logo"/>
         <input className='navbar__searchbar' type='text' placeholder='Search'/>
         <img className='navbar__avatar' src={avatar} />
-        <button className='navbar__upload' type='submit'></button>
+        <button className='navbar__upload' type='submit'>UPLOAD</button>
       </nav>
     </header>
   )

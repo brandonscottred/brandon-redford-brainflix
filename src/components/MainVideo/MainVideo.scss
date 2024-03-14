@@ -11,6 +11,8 @@
     .videoplayer-wrapper {
         position: relative;
         padding-bottom: 56.25%;
+        width: 100%;
+        background-color: $BrainFlix-DarkBlack;
     
         .videoplayer {
             position: absolute;
