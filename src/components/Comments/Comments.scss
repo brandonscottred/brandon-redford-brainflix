@@ -6,3 +6,13 @@
 @import '../../styles/partials/divider';
 @import '../../styles/partials/forms';
 
+.comments {
+
+    &__avatar {
+        width: 25%;
+    }
+}
+
+.divider {
+    @include divider;
+}
