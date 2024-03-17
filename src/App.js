@@ -20,16 +20,12 @@ function App() {
 
 }
 
-
-
-
-
   return (
     <>
     <Header/>
     <main>
     <MainVideo videoProps = {mainVideos[selectedVideo]} />
-    <Comments videoPropsComments = {mainVideos[0].comments} />
+    <Comments videoPropsComments = {mainVideos[selectedVideo].comments} />
     <VideoList videoList = {videoList} 
     handleVideoChange = {handleVideoChange}
     />

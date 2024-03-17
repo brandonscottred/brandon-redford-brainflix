@@ -19,17 +19,16 @@ function Comments(props) {
             3 Comments
           </h3>
           <img className='comments__avatar' src={avatar} />
-          <form id="commentsForm" action="" class="comments__form">
-            <label className="comments__form--label" for="Comment">JOIN THE CONVERSATION</label>
-            <textarea className="comments__form--comment" name="Comment" id="" cols="30" rows="10" placeholder=" Add a new comment" type="text"></textarea>
+          <form className="comments__form" id="commentsForm" action="" >
+            <label className="comments__form--label" htmlFor="comment">JOIN THE CONVERSATION</label>
+            <textarea className="comments__form--comment" name="Comment" id="comment" cols="30" rows="10" placeholder=" Add a new comment" type="text"></textarea>
             <input className="comments__form--cta" type="submit" value="COMMENT"/>
             <div className="divider"></div>
           </form>
 
           {props.videoPropsComments.map((comments) => {
-            console.log(props.videoPropsComments);
             return (
-              <div className='comments__default'>
+              <div key={comments.id} className='comments__default'>
               <img src={''} />
               <p>{comments.name}</p>
               <p>{formatDate(comments.timestamp)}</p>

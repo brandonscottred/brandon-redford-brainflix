@@ -8,8 +8,10 @@ function Header() {
     <header className="header">
       <nav className='navbar'>
         <img className='navbar__logo' src={logo} alt="brainflix-logo"/>
-        <input className='navbar__searchbar' type='text' placeholder='Search'/>
-        <img className='navbar__avatar' src={avatar} />
+        <div>
+          <input className='navbar__searchbar' type='text' placeholder='Search'/>
+          <img className='navbar__avatar' src={avatar} />
+        </div>
         <button className='navbar__upload' type='submit'>UPLOAD</button>
       </nav>
     </header>

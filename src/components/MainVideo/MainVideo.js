@@ -16,7 +16,6 @@ function formatDate(timestamp) {
 function MainVideo (props) {
 
     const currentVideo = props.videoProps
-    console.log(currentVideo.comments)
 
     return (
         <section className='mainvideo'>
