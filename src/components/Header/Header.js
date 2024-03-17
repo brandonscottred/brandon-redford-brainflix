@@ -1,4 +1,4 @@
-import './Header.css'
+import './Header.scss'
 import logo from '../../assets/logo/BrainFlix-logo.svg'
 import avatar from '../../assets/images/Mohan-muruge.jpg'
 

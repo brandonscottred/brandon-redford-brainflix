@@ -1,8 +1,9 @@
-import './MainVideo.css'
-import video from '../../data/videos.json'
-import videoDetails from '../../data/video-details.json'
+import './MainVideo.scss'
+
 import likes from '../../assets/icons/likes.svg'
 import views from '../../assets/icons/views.svg'
+
+
 
 function formatDate(timestamp) {
     let toDate = new Date(timestamp).getDate();
@@ -12,10 +13,10 @@ function formatDate(timestamp) {
     return(original_date)
 }
 
-
 function MainVideo (props) {
 
     const currentVideo = props.videoProps
+    console.log(currentVideo.comments)
 
     return (
         <section className='mainvideo'>

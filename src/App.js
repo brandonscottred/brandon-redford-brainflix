@@ -1,23 +1,38 @@
-import './App.css';
+import './App.scss';
 
 import Header from './components/Header/Header.js';
 import MainVideo from './components/MainVideo/MainVideo.js';
 import Comments from './components/Comments/Comments.js'
+import VideoList from './components/VideoList/VideoList.js'
 
-import mainvideos from './data/video-details.json'
-import videolist from './data/videos.json'
+import mainVideos from './data/video-details.json'
+import videoList from './data/videos.json'
+
+import { useState } from 'react';
 
 function App() {
 
-  console.log(mainvideos);
-  console.log(videolist);
+  const [selectedVideo, setSelectedVideo] = useState(0);
+
+  const handleVideoChange = (index) => {
+
+    setSelectedVideo(index)
+
+}
+
+
+
+
 
   return (
     <>
     <Header/>
     <main>
-    <MainVideo videoProps = {mainvideos[0]} />
-    <Comments/>
+    <MainVideo videoProps = {mainVideos[selectedVideo]} />
+    <Comments videoPropsComments = {mainVideos[0].comments} />
+    <VideoList videoList = {videoList} 
+    handleVideoChange = {handleVideoChange}
+    />
     </main>
     </>
   );
