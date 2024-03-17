@@ -11,28 +11,35 @@
 
     .navbar {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
         padding: 16px;
+        flex-wrap: wrap;
 
-        .div {
+        div {
             width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         &__logo {
-        
+            width: 100%;
+            margin-bottom: 1rem;
+            max-height: 25px;
+            max-width: 120px;
+        }
+
+        &__searchbar {
+            @include formFields;
         }
 
         &__avatar {
-            height: 36px;
-            width: 36px;
-            border-radius: 50%;
-            padding-left: 1rem;
+            @include avatar;
         }
 
         &__upload {
-            display: block;
-            align-self: center;
+            margin-top: 1rem;
+            @include buttons;
+            font-family: avenirNextDemi;
         }
     }
 }
