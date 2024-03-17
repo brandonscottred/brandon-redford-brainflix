@@ -18,23 +18,35 @@ function Comments(props) {
           <h3 className='comments__title'>
             3 Comments
           </h3>
-          <img className='comments__avatar' src={avatar} />
-          <form className="comments__form" id="commentsForm" action="" >
-            <label className="comments__form--label" htmlFor="comment">JOIN THE CONVERSATION</label>
-            <textarea className="comments__form--comment" name="Comment" id="comment" cols="30" rows="10" placeholder=" Add a new comment" type="text"></textarea>
-            <input className="comments__form--cta" type="submit" value="COMMENT"/>
-            <div className="divider"></div>
-          </form>
+          <div className='comments-container'>
+            <img className='comments__avatar' src={avatar} />
+            <form className="comments__form" id="commentsForm" action="" >
+              <div id='label-text'>
+                <label className="comments__form--label" htmlFor="comment">JOIN THE CONVERSATION</label>
+                <textarea className="comments__form--comment" name="Comment" id="comment" placeholder=" Add a new comment" type="text"></textarea>
+              </div>
+               <input className="comments__form--cta" type="submit" value="COMMENT"/>
+            </form>
+          </div>
+          <div className="divider"></div>
 
           {props.videoPropsComments.map((comments) => {
             return (
-              <div key={comments.id} className='comments__default'>
-              <img src={''} />
-              <p>{comments.name}</p>
-              <p>{formatDate(comments.timestamp)}</p>
-              <p>{comments.comment}</p>
-              <div className='divider'></div>
+              <>
+              <div className='comments__default' key={comments.id} >
+                <div className='comments__default--avatar'>
+                  <img src=' ' />
+                </div>
+                <div className='comments__default--container'>
+                  <div id='name-date'>
+                    <p>{comments.name}</p>
+                    <p>{formatDate(comments.timestamp)}</p>
+                  </div>
+                  <p>{comments.comment}</p>
+                </div>
               </div>
+              <div className='divider'></div>
+              </>
             )
             })}
 

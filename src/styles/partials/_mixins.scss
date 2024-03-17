@@ -96,20 +96,24 @@
 }
 
 @mixin avatar {
-    height: 36px;
-    width: 36px;
-    @include tablet {
-        height: 40px;
-        width: 40px;
-    }
-    @include tablet {
-        height: 40px;
-        width: 40px;
-    }
-    border-radius: 50%;
-    @include mobile {
-        margin-left: 1rem;
-    }
-    margin-left: 24px; 
+    border-radius: 50%; 
     background-color: $Mercury;
+
+    @include mobile {
+        margin: 0 1rem;
+        height: 36px;
+        width: 36px;
+    }
+
+    @include tablet {
+        height: 40px;
+        width: 40px;
+        margin: 0 24px;
+    }
+
+    @include desktop {
+        height: 40px;
+        width: 40px;
+        margin: 0 24px;
+    }
 }

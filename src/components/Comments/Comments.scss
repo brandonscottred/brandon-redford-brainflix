@@ -8,11 +8,154 @@
 
 .comments {
 
+    @include mobile {
+        margin: 0 16px 24px 16px;
+    }
+    @include tablet {
+        margin: 0 24px 36px 24px;
+    }
+    @include desktop {
+        margin: 0 24px 36px 24px;
+    }
+
     &__avatar {
-        width: 25%;
+        @include avatar;
+    }
+
+    &__form {
+        width: 100%;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: avenirNextDemi;
+        }
+        @include tablet {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: end;
+            font-family: avenirNextDemi;
+        }
+        @include desktop {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: end;
+            font-family: avenirNextDemi;
+        }
+
+        &--comment {
+
+
+            @include formFields;
+
+            @include mobile {
+                width: 100%;
+                margin: 16px 0;
+            }
+            @include tablet {
+               height: 40px
+            }
+            @include desktop {
+                height: 40px
+            }
+        }
+
+        &--cta {
+            @include buttons;
+
+            @include tablet {
+                margin-left: 24px;
+            }
+
+            @include desktop {
+                margin-left: 24px;
+            }
+        }
+    }
+
+    &__default {
+        display: flex;
+
+        @include mobile {
+            margin-top: 16px;
+        }
+        @include tablet {
+            margin-top: 16px;
+        }
+        @include desktop {
+            margin-top: 16px;
+        }
+
+        &--avatar {
+
+            img {
+                @include avatar;
+
+                @include mobile {
+                    margin: 0 16px;
+                }
+            }
+        }
     }
 }
 
 .divider {
     @include divider;
+
+    @include mobile {
+        margin-top: 16px;
+    }
+    @include tablet {
+        margin-top: 24px;
+    }
+    @include desktop {
+        margin-top: 24px;
+    }
+}
+
+.comments-container {
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+
+    @include mobile {
+    }
+
+    @include tablet {
+
+    }
+    @include desktop {
+
+    }
+}
+
+#name-date {
+    display: flex;
+    justify-content: space-between;
+    
+    @include mobile {
+        margin: 0 16px 16px 0;
+    }
+    @include tablet {
+        margin: 0 24px 24px 0;
+    }
+    @include desktop {
+        margin: 0 24px 24px 0;
+    }
+}
+
+#label-text {
+    width: 100%;
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+    }
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+    }
 }
