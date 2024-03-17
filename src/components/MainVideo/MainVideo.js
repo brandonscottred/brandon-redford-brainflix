@@ -20,19 +20,32 @@ function MainVideo (props) {
     return (
         <section className='mainvideo'>
             <div className='videoplayer-wrapper'>
-                <video poster={currentVideo.image} controls className='videoplayer' >
+                <video className='mainvideo__videoplayer' poster={currentVideo.image} controls  >
                     Your Browser Does Not Support Video File Type
                 </video>
             </div>
             <h1 className='mainvideo__title'>{currentVideo.title}</h1>
+            <div className='divider mainvideo__divider'></div>
             <div className='mainvideo__icons'>
-                <p>By {currentVideo.channel}</p>
-                <p>{formatDate(currentVideo.timestamp)}</p>
-                <img src={views}/>
-                <p>{currentVideo.views}</p>
-                <img src={likes}/>
-                <p>{currentVideo.likes}</p>
+                <div id='icons-container'>
+                    <p className='mainvideo__icons--channel'>By {currentVideo.channel}</p>
+                    <p className='mainvideo__icons--date'>{formatDate(currentVideo.timestamp)}</p>
+                </div>
+                <div id='icons-container'>
+                    <div className='mainvideo__icons--container'>
+                    <img className='mainvideo__icons--views' src={views}/>
+                    <p className='mainvideo__icons--views'>{currentVideo.views}</p>
+                    </div>
+                    
+                    <div className='mainvideo__icons--container'>
+                    <img className='mainvideo__icons--likes' src={likes}/>
+                    <p className='mainvideo__icons--likes'>{currentVideo.likes}</p>
+                    </div>
+                </div>
+
+
             </div>
+            <div className='divider'></div>
             <p className='mainvideo__description'>{currentVideo.description}</p>   
         </section>
     )
