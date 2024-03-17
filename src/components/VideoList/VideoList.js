@@ -7,11 +7,11 @@ const VideoList = (props) => {
 
   return (
     <div>
-        <h1>NEXT VIDEOS</h1>
+        <h1 className='title'>NEXT VIDEOS</h1>
         {props.videoList.map((video, index) => {
 
             return (
-                <div key={video.id} onClick={()=>props.handleVideoChange(index)} className='videolist'>
+                <div className='videolist' key={video.id} onClick={()=>props.handleVideoChange(index)} >
                   <img className='videolist__image' src={video.image} />
                   <div>
                     <p className='videolist__title'>{video.title}</p>
