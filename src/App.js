@@ -1,13 +1,10 @@
 import './App.scss';
-
 import Header from './components/Header/Header.js';
 import MainVideo from './components/MainVideo/MainVideo.js';
 import Comments from './components/Comments/Comments.js'
 import VideoList from './components/VideoList/VideoList.js'
-
 import mainVideos from './data/video-details.json'
 import videoList from './data/videos.json'
-
 import { useState } from 'react';
 
 function App() {
