@@ -1,5 +1,6 @@
 import './Comments.scss'
 import avatar from '../../assets/images/Mohan-muruge.jpg'
+import postComment from '../../assets/icons/add_comment.svg'
 
 
 function formatDate(timestamp) {
@@ -25,7 +26,10 @@ function Comments(props) {
                 <label className="comments__form--label" htmlFor="comment">JOIN THE CONVERSATION</label>
                 <textarea className="comments__form--comment" name="Comment" id="comment" placeholder=" Add a new comment" type="text"></textarea>
               </div>
-               <input className="comments__form--cta" type="submit" value="COMMENT"/>
+              <div className='comments__form--cta'>
+                <img className='comments__form--cta-icon' src={postComment}/>
+                <input className="comments__form--cta-comment" type="submit" value="COMMENT"/>
+              </div>
             </form>
           </div>
           <div className="divider"></div>

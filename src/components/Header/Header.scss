@@ -67,17 +67,15 @@
         }
 
         &-searchbar {
-            @include formFields;
+            position: relative;
+            max-width: 100%;
+            min-width: 240px;
+            min-height: 36px;
 
-            @include mobile {
-                position: relative;
-            }
             @include tablet {
-                position: relative;
                 max-height: 40px;
             }
             @include desktop {
-                position: relative;
                 max-height: 40px;
             }
 
