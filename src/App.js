@@ -19,14 +19,14 @@ function App() {
 
   return (
     <>
-    <Header/>
-    <main>
-    <MainVideo videoProps = {mainVideos[selectedVideo]} />
-    <Comments videoPropsComments = {mainVideos[selectedVideo].comments} />
-    <VideoList videoList = {videoList} 
-    handleVideoChange = {handleVideoChange}
-    />
-    </main>
+      <Header/>
+      <main>
+        <MainVideo videoProps = {mainVideos[selectedVideo]} />
+        <section className='desktop-sidebar'>
+          <Comments videoPropsComments = {mainVideos[selectedVideo].comments} />
+          <VideoList videoList = {videoList} handleVideoChange = {handleVideoChange} />
+        </section>
+      </main>
     </>
   );
 }
