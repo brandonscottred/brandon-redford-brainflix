@@ -7,7 +7,7 @@
 @import '../../styles/partials/forms';
 
 .comments {
-
+    
     @include mobile {
         margin: 0 16px 24px 16px;
     }
@@ -17,6 +17,101 @@
     @include desktop {
         margin: 0 24px 36px 24px;
     }
+
+    &-mainvideo {
+            
+        @include mobile {
+            margin: 24px 16px 8px 16px;
+        }
+        @include desktop {
+            margin: 8px 24px 8px 24px;
+        }
+        @include tablet {
+            margin: 8px 24px 8px 24px;
+        }
+
+        &__title {
+            @include page-header;
+            @include mobile {
+                margin: 24px 16px 16px 16px;
+            }
+            @include desktop {
+                margin: 36px 24px 8px 24px;
+            }
+            @include tablet {
+                margin: 36px 24px 8px 24px;
+            }
+        }
+    
+        &__divider {
+            @include tablet {
+                visibility: hidden;
+            }
+            @include desktop {
+                visibility: hidden;
+            }
+        }
+    
+        &__icons {
+            display: flex;
+            @include mobile {
+                justify-content: space-around;
+                margin-top: 16px;
+            }
+            @include tablet {                
+                width: 90%;
+                margin: auto;
+            }
+            @include desktop {                
+                width: 90%;
+                margin: auto;
+            }
+    
+            &--channel {
+                @include mobile {
+                    margin-bottom: 16px;
+                }
+                @include tablet {
+                    margin-right: 24px;
+                }
+                @include desktop {
+                    margin-right: 24px;
+                }
+            }
+    
+            &--container {
+                display: flex;
+    
+                @include mobile {
+                    margin-bottom: 16px;
+                }
+                @include tablet {
+                    margin-right: 24px;
+                }
+                @include desktop {
+                    margin-right: 24px;
+                }
+    
+                img {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    
+        &__description {
+    
+            @include mobile {
+                margin: 24px 16px 16px 16px;
+            }
+            @include desktop {
+                margin: 36px 24px 24px 24px;
+            }
+            @include tablet {
+                margin: 36px 24px 24px 24px;
+            }
+        }
+    }
+    
 
     &__title {
         font-family: avenirNextDemi;
@@ -136,6 +231,18 @@
     }
 }
 
+#icons-container {
+    @include tablet {
+        display: flex;
+        width: 100%;
+    }
+    @include desktop {
+        display: flex;
+        width: 100%;
+
+    }
+}
+
 .divider {
     @include divider;
 
@@ -204,4 +311,8 @@
         color: $Silver;
         font-family: avenirNextRegular;
     }
+}
+
+#icons-container {
+    margin-bottom: -16px;
 }

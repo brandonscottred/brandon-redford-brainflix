@@ -23,7 +23,7 @@ function App() {
       <main>
         <MainVideo videoProps = {mainVideos[selectedVideo]} />
         <section className='desktop-sidebar'>
-          <Comments videoPropsComments = {mainVideos[selectedVideo].comments} />
+          <Comments videoProps = {mainVideos[selectedVideo]} videoPropsComments = {mainVideos[selectedVideo].comments} />
           <VideoList videoList = {videoList} handleVideoChange = {handleVideoChange} />
         </section>
       </main>
