@@ -6,7 +6,7 @@ const VideoList = (props) => {
   
 
   return (
-    <div>
+    <div className='container'>
         <h1 className='title'>NEXT VIDEOS</h1>
         {props.videoList.map((video, index) => {
 
