@@ -6,6 +6,10 @@
 @import './styles/partials/divider';
 @import './styles/partials/forms';
 
+* {
+    font-family: avenirNextRegular;
+}
+
 .desktop-sidebar {
     
     @include desktop {
