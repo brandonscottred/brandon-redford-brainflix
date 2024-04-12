@@ -8,9 +8,10 @@ const VideoList = (props) => {
   return (
     <div className='container'>
         <h1 className='title'>NEXT VIDEOS</h1>
-        {props.videoList.map((video, index) => {
 
+        {props.videoList.map((video, index) => {
             return (
+              // <Link> handle video change
                 <div className='videolist' key={video.id} onClick={()=>props.handleVideoChange(index)} >
                   <img className='videolist__image' src={video.image} />
                   <div>
@@ -20,6 +21,7 @@ const VideoList = (props) => {
                 </div>
             )
         })}
+        
     </div>
   )
 }

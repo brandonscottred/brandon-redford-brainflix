@@ -1,32 +1,26 @@
 import './App.scss';
 import Header from './components/Header/Header.js';
-import MainVideo from './components/MainVideo/MainVideo.js';
-import Comments from './components/Comments/Comments.js'
-import VideoList from './components/VideoList/VideoList.js'
-import mainVideos from './data/video-details.json'
-import videoList from './data/videos.json'
-import { useState } from 'react';
+import MainVideoPage from './pages/MainVideoPage/MainVideoPage.js'
+import VideoUploadPage from './pages/VideoUploadPage/VideoUploadPage.js'
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+
+
+const api_key = '?api_key=9b674019-74cc-4013-9aa2-3645aa0e289c';
+const base_url = 'https://project-2-api.herokuapp.com';
 
 function App() {
 
-  const [selectedVideo, setSelectedVideo] = useState(0);
-
-  const handleVideoChange = (index) => {
-
-    setSelectedVideo(index)
-
-}
-
   return (
     <>
-      <Header/>
-      <main>
-        <MainVideo videoProps = {mainVideos[selectedVideo]} />
-        <section className='desktop-sidebar'>
-          <Comments videoProps = {mainVideos[selectedVideo]} videoPropsComments = {mainVideos[selectedVideo].comments} />
-          <VideoList videoList = {videoList} handleVideoChange = {handleVideoChange} />
-        </section>
-      </main>
+    <Header/>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Navigate to='/home' />} /> 
+        <Route path='/home' element={<MainVideoPage/>} /> 
+        <Route path='/video/:videoId' element={<MainVideoPage/>} />
+        <Route path='/upload-video' element={<VideoUploadPage/>} /> 
+      </Routes>
+    </Router>
     </>
   );
 }

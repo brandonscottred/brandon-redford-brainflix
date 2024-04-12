@@ -1,7 +1,9 @@
-import './MainVideo.scss'
+import './HeroVideo.scss'
+import { useParams } from 'react-router-dom';
 
 
-function MainVideo (props) {
+
+function HeroVideo (props) {
 
     const currentVideo = props.videoProps
 
@@ -16,4 +18,4 @@ function MainVideo (props) {
     )
 }
 
-export default MainVideo;
+export default HeroVideo;
