@@ -1,24 +1,26 @@
 import React from 'react'
 import './VideoList.scss'
+import { Link } from 'react-router-dom';
+
 
 const VideoList = (props) => {
-
-  
-
+  console.log('props', props)
   return (
     <div className='container'>
         <h1 className='title'>NEXT VIDEOS</h1>
 
         {props.videoList.map((video, index) => {
+
             return (
-              // <Link> handle video change
-                <div className='videolist' key={video.id} onClick={()=>props.handleVideoChange(index)} >
+              <Link to={`/video/${video.id}`} >
+                <div className='videolist' key={video.id} >
                   <img className='videolist__image' src={video.image} />
                   <div>
                     <p className='videolist__title'>{video.title}</p>
                     <p className='videolist__channel'>{video.channel}</p>
                   </div>
                 </div>
+              </Link>
             )
         })}
         

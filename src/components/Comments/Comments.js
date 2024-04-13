@@ -14,8 +14,11 @@ function formatDate(timestamp) {
 
 
 function Comments(props) {
+  console.log('comments', props)
 
-    const currentVideoComments = props.videoProps
+    const currentVideoComments = props.heroVideoInfo;
+    console.log('currentVideoComments', currentVideoComments)
+
 
     return(
       <section className='comments'>
@@ -57,10 +60,10 @@ function Comments(props) {
           </div>
           <div className="divider"></div>
 
-          {props.videoPropsComments.map((comments) => {
+          {props.comments.map((comments) => {
             return (
               <>
-              <div className='comments__default' key={comments.id} >
+              <div className='comments__default'  key={comments.id} >
                 <div className='comments__default--avatar'>
                   <img src=' ' />
                 </div>
