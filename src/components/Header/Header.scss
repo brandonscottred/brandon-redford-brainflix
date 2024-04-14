@@ -12,6 +12,7 @@
     .navbar {
         display: flex;
 
+
         @include mobile {
             justify-content: center;
             padding: 16px;
@@ -19,6 +20,8 @@
         }
         @include tablet {
             padding: 24px;
+            box-sizing: border-box;
+            max-width: 90%;
         }
         @include desktop {
             padding: 24px;
@@ -106,6 +109,7 @@
 
         &__avatar {
             @include avatar;
+
             @include tablet {
                 order: 4;
             }
@@ -142,6 +146,10 @@
                 @include buttons;
                 font-family: avenirNextDemi;
                 position: absolute;
+
+                @include mobile {
+                    width: 100%;
+                }
     
                 @include tablet {
                     width: 100%;

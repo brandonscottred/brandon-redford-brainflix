@@ -21,13 +21,15 @@ function Header() {
           <input className='navbar-searchbar__input' type='text' placeholder='Search'/>
         </div>
         <img className='navbar__avatar' src={avatar} />
-        <div className='navbar-btn'>
-          <img className='navbar-btn__icon' src={btnIcon}/>
-          <button className='navbar-btn__upload' type='submit'>UPLOAD</button>
-        </div>
+          <div className='navbar-btn'>
+            <img className='navbar-btn__icon' src={btnIcon}/>
+            <Link to='/upload-video'>
+            <button className='navbar-btn__upload' type='submit'>UPLOAD</button>
+            </Link>
+          </div>
       </nav>
     </header>
-  )
+  );
 }
 
 
