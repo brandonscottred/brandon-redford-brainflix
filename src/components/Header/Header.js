@@ -3,6 +3,8 @@ import logo from '../../assets/logo/BrainFlix-logo.svg'
 import avatar from '../../assets/images/Mohan-muruge.jpg'
 import searchIcon from '../../assets/icons/search.svg'
 import btnIcon from '../../assets/icons/upload.svg'
+import { Link } from 'react-router-dom';
+
 
 function Header() {
   
@@ -10,7 +12,9 @@ function Header() {
     <header className="header">
       <nav className='navbar'>
         <div className='navbar-container'>
+          <Link to='/'>
           <img className='navbar-container__logo' src={logo} alt="brainflix-logo"/>
+          </Link>
         </div>
         <div className='navbar-searchbar'>
           <img className='navbar-searchbar__icon' src={searchIcon}/>

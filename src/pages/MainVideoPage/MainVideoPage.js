@@ -2,7 +2,7 @@ import HeroVideo from '../../components/HeroVideo/HeroVideo.js';
 import Comments from '../../components/Comments/Comments.js'
 import VideoList from '../../components/VideoList/VideoList.js'
 import { useState, useEffect } from 'react'; 
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from 'axios'
 
 const baseUrl = 'https://project-2-api.herokuapp.com/'
@@ -14,15 +14,12 @@ function MainVideoPage() {
 
     const fetchMainVideo = async (videoId) => {
         const response = await axios.get(`${baseUrl}videos/${videoId}${apiKey}`);
-        console.log('fetch main video', response.data)
-        // setState({ ...state, heroVideo:response.data })
         setState((oldState) => ({ ...oldState, heroVideo:response.data }))
     }; 
 
     useEffect(() => {
         const fetchVideoList = async () => {
             const response = await axios.get(`${baseUrl}videos${apiKey}`);
-            console.log('fetch video list', response)
             setState({ ...state, videoList:response.data })
             const heroId = response.data[0].id
             fetchMainVideo(heroId); 

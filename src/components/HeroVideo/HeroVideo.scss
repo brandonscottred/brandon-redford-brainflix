@@ -9,20 +9,17 @@
 .mainvideo {
 
     .videoplayer-wrapper {
-        width: 100vw;
         background-color: $BrainFlix-DarkBlack;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
 
-        @include tablet {
-            height: 56.25vw;
-        }
+
     }
     
     &__videoplayer {
-        max-width: 100%;
-
-        @include tablet {
-
-        }
+        max-width: 56.25vh;
     }
 
 }

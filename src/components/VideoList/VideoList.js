@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 
 const VideoList = (props) => {
-  console.log('props', props)
+
   return (
     <div className='container'>
         <h1 className='title'>NEXT VIDEOS</h1>
 
-        {props.videoList.map((video, index) => {
+        {props.videoList.map((video) => {
 
             return (
               <Link to={`/video/${video.id}`} >
