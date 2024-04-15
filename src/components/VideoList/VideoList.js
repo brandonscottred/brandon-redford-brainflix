@@ -12,12 +12,12 @@ const VideoList = (props) => {
         {props.videoList.map((video) => {
 
             return (
-              <Link to={`/video/${video.id}`} >
+              <Link className='link' to={`/video/${video.id}`} >
                 <div className='videolist' key={video.id} >
                   <img className='videolist__image' src={video.image} />
-                  <div>
-                    <p className='videolist__title'>{video.title}</p>
-                    <p className='videolist__channel'>{video.channel}</p>
+                  <div className='videolist__info'>
+                    <p className='videolist__info--title'>{video.title}</p>
+                    <p className='videolist__info--channel'>{video.channel}</p>
                   </div>
                 </div>
               </Link>

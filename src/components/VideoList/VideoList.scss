@@ -40,16 +40,32 @@
     &__image {
         height: 100px;
         width: 150px;
+        min-width: 150px;
         margin-right: 16px;
         border-radius: 4px;
 
         @include desktop {
+            width: 150px;
             min-width: 150px;
         }
     }
 
-    &__title {
-        margin-bottom: 16px;
-        font-family: avenirNextBold
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        max-width: 250px;
+
+        &--title {
+            font-family: avenirNextBold;
+        }
+
+        &--channel {
+        }
     }
+}
+
+.link {
+    text-decoration: none;
+    color: $BrainFlix-DarkBlack;
 }

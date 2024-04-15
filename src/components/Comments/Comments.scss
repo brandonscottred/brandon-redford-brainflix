@@ -61,13 +61,16 @@
             @include tablet {                
                 width: 90%;
                 margin: auto;
+                padding: 2rem;
             }
             @include desktop {                
                 width: 90%;
                 margin: auto;
+                padding: 2rem;
             }
     
             &--channel {
+                font-weight: bold;
                 @include mobile {
                     margin-bottom: 16px;
                 }
@@ -99,6 +102,7 @@
         }
     
         &__description {
+            @include body-copy;
     
             @include mobile {
                 margin: 24px 16px 16px 16px;
@@ -210,12 +214,16 @@
 
         @include mobile {
             margin-top: 16px;
+            margin-bottom: 16px;
         }
         @include tablet {
             margin-top: 16px;
+            margin-bottom: 24px;
+
         }
         @include desktop {
             margin-top: 16px;
+            margin-bottom: 24px;
         }
 
         &--avatar {
@@ -259,7 +267,7 @@
 
 .comments-container {
     width: 100%;
-    margin-top: 16px;
+    margin: 16px 0;
     display: flex;
     justify-content: space-between;
 

@@ -50,7 +50,7 @@ function Comments(props) {
             <form className="comments__form" id="commentsForm" action="" >
               <div id='label-text'>
                 <label className="comments__form--label" htmlFor="comment">JOIN THE CONVERSATION</label>
-                <textarea className="comments__form--comment" name="Comment" id="comment" placeholder=" Add a new comment" type="text"></textarea>
+                <textarea className="comments__form--comment" name="comment" id="comment" placeholder=" Add a new comment" type="text"></textarea>
               </div>
               <div className='comments__form--cta'>
                 <img className='comments__form--cta-icon' src={postComment}/>

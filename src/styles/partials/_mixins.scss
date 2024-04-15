@@ -60,36 +60,36 @@
 
 @mixin body-copy {
     @include mobile {
-        font-size: 0.813rem;
-        line-height: 1.125rem;
+        font-size: 1rem;
+        line-height: 1.375rem;
         font-family: avenirNextRegular;
     }
     @include tablet {
-        font-size: 0.875rem;
-        line-height: 1.375rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
         font-family: avenirNextRegular;
 
     }
     @include desktop {
-        font-size: 0.875rem;
-        line-height: 1.375rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
         font-family: avenirNextRegular;
     }
 }
 
 @mixin labels-buttons {
     @include mobile {
-        font-size: 0.625rem;
+        font-size: 1rem;
         line-height: 1.25rem;
         font-family: avenirNextDemi;
     }
     @include tablet {
-        font-size: 0.75rem;
+        font-size: 1rem;
         line-height: 1.25rem;
         font-family: avenirNextDemi;
     }
     @include desktop {
-        font-size: 0.75rem;
+        font-size: 1rem;
         line-height: 1.25rem;
         font-family: avenirNextDemi;
     }

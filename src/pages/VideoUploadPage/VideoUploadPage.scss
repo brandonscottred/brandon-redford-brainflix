@@ -9,4 +9,121 @@
 .divider {
     margin-top: 0;
     width: 100%;
+    margin-bottom: 24px;
+}
+
+.form {
+    margin: 0 16px;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        margin: 0 36px;
+    }
+    @include desktop {
+        margin: 0 36px;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        margin-bottom: 16px;
+
+        @include tablet {
+            @include page-header;
+        }
+        @include desktop {
+            @include page-header;
+        }
+    }
+
+    &__label {
+        color: $Silver;
+        @include labels-buttons;
+        font-size: 16px;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+        }
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        &--img {
+            max-width: 100%;
+            border-radius: 4px;
+            margin-bottom: 16px;
+
+            @include tablet {
+                max-width: 50%;
+            }
+            @include desktop {
+                max-width: 25%;
+            }
+        }
+
+        &--title {
+            @include formFields;
+            min-width: 100%;
+            margin-bottom: 16px;
+
+            &[type=text] {
+                padding-left: 12px;
+            }
+
+        }
+
+        &--description {
+            @include formFields;
+            min-width: 100%;
+            margin-bottom: 16px;
+
+            &[type=text] {
+                padding-left: 12px;
+            }
+        }
+    }
+
+    &__btn {
+        position: relative;
+
+        @include tablet {
+            align-self: flex-end;
+            margin-top: 24px;
+        }
+        @include desktop {
+            align-self: flex-end;
+            margin-top: 24px;
+        }
+
+        &--publish {
+            @include buttons;
+            @include labels-buttons;
+        }
+        
+        &--icon {
+            position: absolute;
+            left: 12px;
+            top: 8px;
+        }
+    }
+
+    &__cancel {
+        margin-top: 24px;
+        align-self: center;
+        text-decoration: none;
+        color: $BrainFlix-Blue;
+        margin: 36px 0 24px 0;
+
+        @include tablet {
+            align-self: flex-end;
+        }
+        @include desktop {
+            align-self: flex-end;
+        }
+    }
 }
