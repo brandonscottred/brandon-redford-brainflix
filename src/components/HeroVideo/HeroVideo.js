@@ -3,6 +3,7 @@ import './HeroVideo.scss'
 function HeroVideo (props) {
 
     const currentVideo = props.heroVideo
+    console.log(currentVideo)
 
     return (
         <section className='mainvideo'>

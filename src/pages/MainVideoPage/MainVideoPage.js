@@ -12,20 +12,28 @@ function MainVideoPage() {
     const [state, setState] = useState({ heroVideo:null, videoList:[] });
     const { videoId } = useParams();
 
-    const fetchMainVideo = async (videoId) => {
-        const response = await axios.get(`${baseUrl}videos/${videoId}${apiKey}`);
-        setState((oldState) => ({ ...oldState, heroVideo:response.data }))
-    }; 
+    const fetchMainVideo = (videoId) => {
+        axios.get(`${baseUrl}videos/${videoId}${apiKey}`)
+          .then(response => {
+            setState(oldState => ({
+              ...oldState,
+              heroVideo: response.data
+            }));
+          })
+      };
 
-    useEffect(() => {
-        const fetchVideoList = async () => {
-            const response = await axios.get(`${baseUrl}videos${apiKey}`);
-            setState({ ...state, videoList:response.data })
-            const heroId = response.data[0].id
-            fetchMainVideo(heroId); 
-        }; 
-        fetchVideoList(); 
-     }, []);
+     useEffect(() => {
+        const fetchVideoList = () => {
+          axios.get(`${baseUrl}videos${apiKey}`)
+            .then(response => {
+              setState({ ...state, videoList: response.data });
+              const heroId = response.data[0].id;
+              fetchMainVideo(heroId);
+            })
+        };
+      
+        fetchVideoList();
+      }, []);
 
     useEffect(() => {
         if(videoId) {
