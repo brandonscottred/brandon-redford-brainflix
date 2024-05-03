@@ -14,7 +14,7 @@ const VideoList = (props) => {
             return (
               <Link className='link' to={`/video/${video.id}`} >
                 <div className='videolist' key={video.id} >
-                  <img className='videolist__image' src={video.image} />
+                  <img alt='' className='videolist__image' src={video.image} />
                   <div className='videolist__info'>
                     <p className='videolist__info--title'>{video.title}</p>
                     <p className='videolist__info--channel'>{video.channel}</p>

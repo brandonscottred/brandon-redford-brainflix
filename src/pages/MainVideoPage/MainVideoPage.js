@@ -5,15 +5,14 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios'
 
-const baseUrl = 'https://project-2-api.herokuapp.com/'
-const apiKey = '?api_key=9b674019-74cc-4013-9aa2-3645aa0e289c'
+const baseUrl = 'http://localhost:8080/'
 
 function MainVideoPage() {
     const [state, setState] = useState({ heroVideo:null, videoList:[] });
     const { videoId } = useParams();
 
     const fetchMainVideo = (videoId) => {
-        axios.get(`${baseUrl}videos/${videoId}${apiKey}`)
+        axios.get(`${baseUrl}videos/${videoId}`)
           .then(response => {
             setState(oldState => ({
               ...oldState,
@@ -24,7 +23,7 @@ function MainVideoPage() {
 
      useEffect(() => {
         const fetchVideoList = () => {
-          axios.get(`${baseUrl}videos${apiKey}`)
+          axios.get(`${baseUrl}videos`)
             .then(response => {
               setState({ ...state, videoList: response.data });
               const heroId = response.data[0].id;

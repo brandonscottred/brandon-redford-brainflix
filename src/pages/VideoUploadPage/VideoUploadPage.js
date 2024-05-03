@@ -3,6 +3,7 @@ import videoThumbnail from '../../assets/images/Upload-video-preview.jpg'
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import postComment from '../../assets/icons/publish.svg'
+import axios from 'axios'
 
 
 function VideoUploadPage() {
@@ -14,10 +15,16 @@ function VideoUploadPage() {
         const title = form.title.value;
         const description = form.description.value;
 
+        const data = {
+            "title": title,
+            "description": description
+        }
+
         if (!title || !description) {
             alert('Please fill in both title and description values')
         } else {
-        alert('Congratulations, your video has been publish!')
+        axios.post('http://localhost:8080/videos', data)
+        alert('Congratulations, your video has been published!')
         }
     }
 
@@ -28,7 +35,7 @@ function VideoUploadPage() {
             <h1 className='form__title'>Upload Video</h1>
             <div className='divider'></div>
             <label className='form__label'>
-                VIDEO THUMBNAIL  <img className='form__label--img' src={videoThumbnail}/>
+                VIDEO THUMBNAIL  <img alt='' className='form__label--img' src={videoThumbnail}/>
             </label>
             <label className='form__label'>
                 TITLE YOUR VIDEO <input className='form__label--title' type='text' name='title' placeholder='Add a title to your video' />
@@ -39,7 +46,7 @@ function VideoUploadPage() {
             <div className='divider'></div>
             <div className='form__btn'>
             <button className='form__btn--publish' type='button' onClick={handleSubmit}>PUBLISH</button>
-            <img className='form__btn--icon' src={postComment}/>
+            <img alt='' className='form__btn--icon' src={postComment}/>
             </div>
             <Link className='form__cancel' to='/'>
             <h2>CANCEL</h2>
@@ -48,7 +55,5 @@ function VideoUploadPage() {
         </>
     )
 };
-
-// do not have to do upload comments, click on 'upload' should do an alert or take you to seperate page with back button
 
 export default VideoUploadPage;
