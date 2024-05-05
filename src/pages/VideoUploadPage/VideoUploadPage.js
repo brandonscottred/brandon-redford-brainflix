@@ -45,7 +45,7 @@ function VideoUploadPage() {
             </label>
             <div className='divider'></div>
             <div className='form__btn'>
-            <button className='form__btn--publish' type='button' onClick={handleSubmit}>PUBLISH</button>
+            <button className='form__btn--publish' type='submit' onClick={handleSubmit}>PUBLISH</button>
             <img alt='' className='form__btn--icon' src={postComment}/>
             </div>
             <Link className='form__cancel' to='/'>

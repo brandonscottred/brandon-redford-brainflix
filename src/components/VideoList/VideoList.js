@@ -12,7 +12,7 @@ const VideoList = (props) => {
         {props.videoList.map((video) => {
 
             return (
-              <Link className='link' to={`/video/${video.id}`} >
+              <Link className='link' to={`/video/${video.id}`} onClick={window.scroll(0,0)}>
                 <div className='videolist' key={video.id} >
                   <img alt='' className='videolist__image' src={video.image} />
                   <div className='videolist__info'>
